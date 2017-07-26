@@ -1,0 +1,9 @@
+<% posts.forEach(function(post, index) { %>
+<div class="row">
+    <div class="span4">
+        <h3><a href="/u/<%= post.user %>"><%= post.user %></a> 说</h3>
+        <p><small><%= post.time %></small></p>
+        <p><%= post.post %></p><!-- POST的内容 -->
+    </div>
+</div>
+<%}) %>
