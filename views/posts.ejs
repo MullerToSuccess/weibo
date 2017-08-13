@@ -2,8 +2,30 @@
 <div class="row">
     <div class="span12">
         <h3><a href="/u/<%= post.user %>"><%= post.user %></a> 说</h3>
-        <p><small><%= post.time %></small></p>
         <p><%= post.post %></p><!-- POST的内容 -->
+        <!--<button class="btn btn-success btn-small" style="float: right;margin-right: 10px"><%= post.up%></button>-->
+        <div style="text-align: right"><p><small><%= post.time %></small>发布...</p></div>
+        <div>
+            <button class="btn btn-info btn-small" style="float: right;margin-right: 10px">
+                <% if (!post.up) { %>
+                0
+                <% } else { %>
+                <%= post.up%>
+                <% } %>
+            </button>
+            <button type="submit"  class="btn btn-small btn-danger" style="float: right;margin-right: 10px">
+                    踩
+            </button>
+            <!--<button class="btn btn-danger btn-small" style="float: right;margin-right: 10px">踩</button>-->
+            <button class="btn btn-success btn-small" style="float: right;margin-right: 10px">评论</button>
+            <button class="btn btn-success btn-small" style="float: right;margin-right: 10px">转发</button>
+        </div>
+        <form method="post" action="/post/update" style="text-align: center">
+            <button type="submit" class="btn btn-primary">
+                <i>test</i>
+            </button>
+        </form>
     </div>
 </div>
+<hr/>
 <%}) %>

@@ -10,6 +10,8 @@ router.post('/', checkLogin);
 router.post('/', function(req, res, next) { 
     var currentUser = req.session.user; //获取当前用户信息
     var post = new Post(currentUser.name, req.body.post);
+    var up = req.body.up;
+    console.log('11111111',up);
     console.log(currentUser);
     post.save(function(err){
         if(err){
@@ -19,6 +21,9 @@ router.post('/', function(req, res, next) {
         req.flash('success','发表成功');
         res.redirect('/u/'+ currentUser.name);
     });
+});
+router.post('/post/update', function(req, res, next){
+    console.log('up!');
 });
 function checkLogin(req, res,next){
     if(!req.session.user){

@@ -17,6 +17,7 @@ var post = require('./routes/post');//发表信息
 var reg = require('./routes/reg');//用户注册
 var login = require('./routes/login');//用户登录
 var logout = require('./routes/logout');//用户登出
+var update = require('./routes/update');//修改
 var app = express();
 
 // view engine setup
@@ -57,6 +58,7 @@ app.use('/post', post);
 app.use('/reg', reg);
 app.use('/login', login);
 app.use('/logout', logout);
+app.use('/post/update', update);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
