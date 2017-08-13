@@ -83,7 +83,7 @@ Post.getAll = function getAll(callback){
         db.collection('posts', function(err, collection){
             if(err){
                 mongodb.close();
-                return callck(err);
+                return callback(err);
             }
             collection.find().toArray(function(err, docs){
                 mongodb.close();
@@ -109,7 +109,7 @@ Post.update = function update(callback){
         db.collection('posts', function(err, collection){
             if(err){
                 mongodb.close();
-                return callck(err);
+                return callback(err);
             }
             //todo 修改某个用户的post
             collection.find().toArray(function(err, docs){

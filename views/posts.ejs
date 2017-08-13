@@ -13,18 +13,18 @@
                 <%= post.up%>
                 <% } %>
             </button>
-            <button type="submit"  class="btn btn-small btn-danger" style="float: right;margin-right: 10px">
+            <!--<button type="submit"  class="btn btn-small btn-danger" style="float: right;margin-right: 10px">-->
+                    <!--踩-->
+            <!--</button>-->
+            <form method="post" action="/post/update" style="text-align: center">
+                <button type="submit" class="btn btn-danger btn-small" style="float: right;margin-right: 10px">
                     踩
-            </button>
+                </button>
+            </form>
             <!--<button class="btn btn-danger btn-small" style="float: right;margin-right: 10px">踩</button>-->
             <button class="btn btn-success btn-small" style="float: right;margin-right: 10px">评论</button>
             <button class="btn btn-success btn-small" style="float: right;margin-right: 10px">转发</button>
         </div>
-        <form method="post" action="/post/update" style="text-align: center">
-            <button type="submit" class="btn btn-primary">
-                <i>test</i>
-            </button>
-        </form>
     </div>
 </div>
 <hr/>

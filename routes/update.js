@@ -21,24 +21,21 @@ router.post('/', function(req, res, next) {
     console.log(currentUser);
     mongodb.open(function(err, db){
         if(err){
-            return callback(err);
+            // return callback(err);
+            console.log(err);
         }
         db.collection('posts', function(err, collection){
             if(err){
                 mongodb.close();
-                return callck(err);
+                // return callback(err);
             }
             //todo 修改某个用户的post
-            // collection.find().toArray(function(err, docs){
-            //     mongodb.close();
-            //     console.log(docs);
-            // });
-            collection.find({'user':currentUser.name}).toArray(function(err, doc){
-                mongodb.close();
-                console.log(doc);
-            })
+            collection.update({'user':currentUser.name},{$set:{'up':100}});
         })
-    })
+        mongodb.close();
+    });
+    req.flash('success','修改成功!');
+    res.redirect('/u/'+ currentUser.name);
 });
 function checkLogin(req, res,next){
     if(!req.session.user){
