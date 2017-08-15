@@ -1,0 +1,10 @@
+<% items.forEach(function(item, index) { %>
+<div class="row">
+    <div class="span12">
+        <h2><%= item.title %></h2><!-- POST的内容 -->
+        <strong>作者:<a><%= item.author%></a></strong>
+        <h3>连接:<a> <%= item.href %></a> </h3>
+    </div>
+</div>
+<hr/>
+<%}) %>

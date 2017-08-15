@@ -2,7 +2,13 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-    <title><%= locals.title %></title>
+    <title>
+        <% if(locals.user){ %>
+        <%= locals.user.name %>的微博
+        <% } else {%>
+        <%= locals.title %>
+        <% } %>
+    </title>
     <link rel="icon" href="../images/me.ico" type="image/x-icon">
     <link rel='stylesheet' href='../stylesheets/bootstrap.css'>
     <style type="text/css">
@@ -31,8 +37,8 @@
                     <li><a href="/reg"> 注册</a></li>
                     <% } else { %>
                     <li><a href="/u/<%= locals.user.name %>">发现</a></li>
+                    <li><a href="/crawl">  图书</a></li>
                     <li><a href="/logout">  登出</a></li>
-                    <li><a href="/more">  其他</a></li>
                     <% } %>
                 </ul>
             </div>
@@ -53,10 +59,16 @@
     <% } %>
     <%- locals.body %> 
 </div>
-   <!--  <footer>
-       <p><a href="http://github.com/MullerToSuccess" target="_blank">贾柯</a> 2017</p>
-       <a href="http://github.com/MullerToSuccess" target="_blank"><img src="../images/me.jpg"></a>
-   </footer> -->
+<!--<div>-->
+    <!--<footer >-->
+        <!--<p><a href="http://github.com/MullerToSuccess" target="_blank">贾柯</a> 2017</p>-->
+    <!--</footer>-->
+<!--</div>-->
+<!--<footer class="footer">-->
+    <!--<div class="container">-->
+        <!--<p><a href="http://github.com/MullerToSuccess" target="_blank">贾柯</a> 2017</p>-->
+    <!--</div>-->
+<!--</footer>-->
 </body>
 <!--<script src="/javascripts/jquery.js"></script>-->
 <script src="/javascripts/bootstrap.js"></script>

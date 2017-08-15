@@ -7,7 +7,7 @@ var Post = require('../models/post.js');
 //All router control
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Microblog', userName:"贾柯" });
+  res.render('index', { title: '首页', userName:"贾柯" });
 });
 router.get('/u/:user', function(req, res){
   User.get(req.params.user, function(err, user){

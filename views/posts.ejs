@@ -1,12 +1,12 @@
 <% posts.forEach(function(post, index) { %>
 <div class="row">
     <div class="span12">
-        <h3><a href="/u/<%= post.user %>"><%= post.user %></a> 说</h3>
+        <h3><a href="/u/<%= post.user %>"><%= post.user %></a> </h3>
         <p><%= post.post %></p><!-- POST的内容 -->
         <!--<button class="btn btn-success btn-small" style="float: right;margin-right: 10px"><%= post.up%></button>-->
         <div style="text-align: right"><p><small><%= post.time %></small>发布...</p></div>
         <div>
-            <button class="btn btn-info btn-small" style="float: right;margin-right: 10px">
+            <button class="btn btn-info btn-small" style="float: right;margin-right: 10px;">
                 <% if (!post.up) { %>
                 0
                 <% } else { %>
