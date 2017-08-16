@@ -19,6 +19,7 @@ var login = require('./routes/login');//用户登录
 var logout = require('./routes/logout');//用户登出
 var update = require('./routes/update');//修改
 var book = require('./routes/book');//爬虫
+var analyse = require('./routes/analyse');//爬虫
 var app = express();
 
 // view engine setup
@@ -60,6 +61,7 @@ app.use('/reg', reg);
 app.use('/login', login);
 app.use('/logout', logout);
 app.use('/book', book);
+app.use('/analyse', analyse);
 app.use('/post/update', update);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
