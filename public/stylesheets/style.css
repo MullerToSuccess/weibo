@@ -1,9 +1,17 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
-  /*color: #c8c8c8;*/
+    color: #00B7FF;
+    /*color: #c8c8c8;*/
+}
+
+.movie-list {
+    width: 100px;
+    height: 200px;
+    float: left;
+    margin-left: 5px;
+    list-style-type: none;
 }

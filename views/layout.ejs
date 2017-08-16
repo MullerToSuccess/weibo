@@ -11,6 +11,7 @@
     </title>
     <link rel="icon" href="../images/me.ico" type="image/x-icon">
     <link rel='stylesheet' href='../stylesheets/bootstrap.css'>
+    <link rel='stylesheet' href='../stylesheets/style.css'>
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -37,7 +38,7 @@
                     <li><a href="/reg"> 注册</a></li>
                     <% } else { %>
                     <li><a href="/u/<%= locals.user.name %>">发现</a></li>
-                    <li><a href="/crawl">  图书</a></li>
+                    <li><a href="/book">  图书</a></li>
                     <li><a href="/logout">  登出</a></li>
                     <% } %>
                 </ul>

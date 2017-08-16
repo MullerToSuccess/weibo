@@ -1,0 +1,24 @@
+<div>
+    <h2>豆瓣20大畅销书:</h2>
+    <ul>
+        <% movies.forEach(function(movie, index) { %>
+        <!--<div class="row">-->
+        <!--<div class="span12">-->
+        <!--<img src=<%= movie.src %>>-->
+        <!--</div>-->
+        <!--</div>-->
+        <li class="movie-list">
+            <img src=<%= movie.src %> style="width:90px;height:130px">
+            <strong><a href="/book/<%= movie.name%>"><%= movie.name%></a></strong>
+            <!--<hr/>-->
+        </li>
+        <%}) %>
+    </ul>
+</div>
+<br>
+<hr/>
+<div style="text-align: center">
+    <strong><a href="/book/vote">投票</a></strong>
+    <strong><a href="/book/vote">投票详情</a></strong>
+</div>
+

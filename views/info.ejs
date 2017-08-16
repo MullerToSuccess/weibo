@@ -1,0 +1,17 @@
+
+<hr/>
+<img src= <%= book.images.medium%>>
+<h3><strong><%= book.title%></strong></h3>
+<strong style="color: red"><%= book.rating.average%>分</strong><br>
+<strong><%= book.price%></strong><br>
+<strong><%= book.publisher%></strong><br>
+<strong style="color: #7aba7b">关键词:<%= book.tags[3].title%></strong>
+<h3>作者</h3>
+<strong><%= book.author%></strong>
+<hr/>
+<h3>图书简介</h3>
+<p><%= book.summary%></p>
+<h3>作者简介</h3>
+<p><%= book.author_intro%></p>
+<hr/>
+
